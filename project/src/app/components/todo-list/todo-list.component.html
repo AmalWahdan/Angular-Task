@@ -1,0 +1,18 @@
+<div class="w-50 m-auto hadow-lg  bg-light  rounded  p-5">
+    <div class="row justify-content-center my-3">
+        <div class="col-lg-8 col-sm-9 rounded">
+            <input [(ngModel)]="searchKey" class="form-control" placeholder="Enter Your Key" />
+        </div>
+        <div class="col-lg-2 col-sm-3 ">
+            <button class="btn btn-dark rounded w-100  fs-5" (click)="addToList()">+</button>
+        </div>
+    </div>
+    <div class="row  justify-content-center mt-3" *ngFor="let todo of todoList let i = index">
+        <div class="col-lg-8 col-sm-9 rounded ">
+            <p class="shadow border border-secondary p-2 rounded muns">{{todo}}</p>
+        </div>
+        <div class="col-lg-2 col-sm-3 ">
+            <button class="btn btn-warning rounded w-100 fs-5 " (click)="removeFromList(i)">-</button>
+        </div>
+    </div>
+</div>

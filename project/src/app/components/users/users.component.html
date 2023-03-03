@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row justify-content-center my-5">
+        <div class="col-lg-8 col-sm-12 shadow-lg  bg-white  rounded  p-5">
+            <table class="table">
+                <thead class="table-dark text-center">
+                    <tr>
+                        <th>Id</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let user of users " class="text-center">
+                    <tr>
+                        <td>
+                            {{user.id}}
+                        </td>
+                        <td>
+                            {{user.email}}
+                        </td>
+                        <td>
+                            {{user.password}}
+                        </td>
+                        <td>
+                            <a class="btn btn-outline-info mx-1 rounded " routerLink="/userDetails/{{user.id}}">
+                                View</a>
+                            <a class="btn btn-outline-dark mx-1 rounded " routerLink="/addUser/{{user.id}}">Update</a>
+                            <a class="btn btn-outline-danger rounded " (click)="deleteUserHandler(user.id)">Remove</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

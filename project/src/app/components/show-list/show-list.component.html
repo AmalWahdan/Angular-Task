@@ -1,0 +1,24 @@
+<div class="bg-light p-3  text-center mt-5 rounded w-50   m-auto ">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-sm-12 ">
+                <h3>Tracks</h3>
+                <select class="form-select" [(ngModel)]="selectValue">
+                    <option>PD Track</option>
+                    <option>Open Source Track</option>
+                    <option>Testing Track</option>
+                    <option>Mearn Track</option>
+                </select>
+                <div [ngSwitch]="selectValue" class="p-3 mb-2 lead  fs-3">
+                    <p *ngSwitchCase="'PD Track'"> Avaliable at Smart & Menofia PD Branch
+                    </p>
+                    <p *ngSwitchCase="'Open Source Track'">Avaliable at Benha & Aswan PD Branch </p>
+                    <p *ngSwitchCase="'Testing Track'"> Doesn't exit this year </p>
+                    <p *ngSwitchCase="'Mearn Track'"> Will be opend soon </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
